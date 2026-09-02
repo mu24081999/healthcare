@@ -1,0 +1,38 @@
+#!/bin/bash
+# Runs as root during .pkg install. Clears local app data for every user.
+set -euo pipefail
+
+clear_user_data() {
+  local home="$1"
+  rm -rf "${home}/Library/Application Support/PetCareClinic"
+  rm -rf "${home}/Library/Application Support/com.petcare.clinic"
+  rm -rf "${home}/Library/Application Support/Waleed Pet Care Clinic"
+  rm -rf "${home}/Library/Caches/com.petcare.clinic"
+  rm -rf "${home}/Library/Caches/PetCareClinic"
+  rm -rf "${home}/Library/Preferences/com.petcare.clinic.plist"
+  rm -rf "${home}/Library/Saved Application State/com.petcare.clinic.savedState"
+  rm -rf "${home}/Library/WebKit/com.petcare.clinic"
+}
+
+# Console user (person who launched the installer)
+CONSOLE_USER="$(stat -f '%Su' /dev/console 2>/dev/null || true)"
+if [[ -n "${CONSOLE_USER}" && "${CONSOLE_USER}" != "root" && -d "/Users/${CONSOLE_USER}" ]]; then
+  clear_user_data "/Users/${CONSOLE_USER}"
+fi
+
+# All local user homes
+for home in /Users/*; do
+  if [[ -d "${home}" && "$(basename "${home}")" != "Shared" ]]; then
+    clear_user_data "${home}"
+  fi
+done
+
+# Root home if present
+if [[ -d /var/root ]]; then
+  clear_user_data /var/root
+fi
+
+# Remove previous app copy so install replaces it cleanly
+rm -rf "/Applications/Waleed Pet Care Clinic.app"
+
+exit 0

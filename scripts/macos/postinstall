@@ -1,0 +1,14 @@
+#!/bin/bash
+# Ensure app ownership is correct after install into /Applications.
+set -euo pipefail
+
+APP="/Applications/Waleed Pet Care Clinic.app"
+if [[ -d "${APP}" ]]; then
+  chmod -R a+rX "${APP}"
+  # Make the main binary executable
+  if [[ -d "${APP}/Contents/MacOS" ]]; then
+    chmod -R a+x "${APP}/Contents/MacOS" || true
+  fi
+fi
+
+exit 0
