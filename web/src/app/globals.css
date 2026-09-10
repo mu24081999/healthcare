@@ -1,0 +1,704 @@
+:root {
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1a1d24;
+  background-color: #eef1f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: #2f5f9e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.65rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+}
+
+h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+p {
+  margin: 0.35rem 0;
+  overflow-wrap: break-word;
+}
+
+code {
+  font-size: 0.9em;
+}
+
+.app-shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 220px;
+  background: #0f2744;
+  color: #e8eef8;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1rem;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.nav a {
+  color: #c9d7ea;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+.nav a.active {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-weight: 500;
+}
+
+.sidebar-foot {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.role-pill {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+.main {
+  flex: 1;
+  padding: 1.5rem 2rem 2rem;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.page {
+  max-width: 1100px;
+}
+
+.page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.muted {
+  color: #5c6473;
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+.hint {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.error {
+  color: #9b1c1c;
+  background: #fde8e8;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 1px 3px rgba(15, 39, 68, 0.08);
+  border: 1px solid #e1e6ef;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stack.tight {
+  gap: 0.65rem;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+}
+
+@media (max-width: 800px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3a4150;
+}
+
+.check-label {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  border-radius: 8px;
+  border: 1px solid #c9d1e0;
+  padding: 0.45rem 0.55rem;
+  background: #fff;
+  color: #1a1d24;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.45rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #e8ecf4;
+  color: #1a1d24;
+}
+
+.btn.primary {
+  background: #2f5f9e;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #274f84;
+}
+
+.btn.accent {
+  background: #2a9d7a;
+  color: #fff;
+}
+
+.btn.accent:hover {
+  background: #238567;
+}
+
+.btn.ghost {
+  background: transparent;
+  border-color: #c9d1e0;
+}
+
+.btn.danger {
+  background: #c03636;
+  color: #fff;
+}
+
+.btn.danger.ghost {
+  background: transparent;
+  color: #a12828;
+  border-color: #e8b4b4;
+}
+
+.btn.small {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+.row-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 0.45rem 0.35rem;
+  border-bottom: 1px solid #e8ecf4;
+  overflow-wrap: break-word;
+}
+
+.table th {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #5c6473;
+}
+
+.right {
+  text-align: right;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  border: 1px solid #c9d1e0;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #3a4150;
+}
+
+.tab.active {
+  background: #0f2744;
+  color: #fff;
+  border-color: #0f2744;
+}
+
+.selected-row {
+  background: #f3f7ff;
+}
+
+.linkish {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #2f5f9e;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  width: min(400px, 100%);
+}
+
+.auth-form-header {
+  margin-bottom: 2rem;
+}
+
+.auth-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.auth-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #1a1d24;
+}
+
+.auth-form-input {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #c9d1e0;
+}
+
+.auth-card h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.auth-card p.subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #5c6473;
+}
+
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 39, 68, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.modal {
+  width: min(520px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.wide-modal {
+  width: min(640px, 100%);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.ellipsis-cell {
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.narrow {
+  max-width: 140px;
+}
+
+.hl-low {
+  border-color: #c03636 !important;
+  background: #fff5f5;
+}
+
+.hl-high {
+  border-color: #b8860b !important;
+  background: #fffbeb;
+}
+
+.hl-low-text {
+  color: #9b1c1c;
+}
+
+.hl-high-text {
+  color: #8a6a00;
+}
+
+.receipt h3 {
+  margin-top: 0;
+}
+
+.opd-prescription-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d8e0ee;
+  padding-bottom: 0.65rem;
+}
+
+.opd-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.opd-prescription-meta {
+  margin-top: 0.7rem;
+}
+
+.opd-prescription-body {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.opd-side-notes {
+  border-left: 1px dashed #ced7e7;
+  padding-left: 0.8rem;
+}
+
+.opd-footer {
+  margin-top: 1rem;
+  border-top: 1px solid #d8e0ee;
+  padding-top: 0.5rem;
+}
+
+.prescription-table th,
+.prescription-table td {
+  font-size: 0.86rem;
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #e8ecf4;
+  padding: 0.5rem;
+  min-width: 100px;
+}
+
+.history-table th:first-child,
+.history-table td:first-child {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 10;
+  min-width: 150px;
+}
+
+.only-print {
+  display: none !important;
+}
+
+.opd-print-preview {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+@media print {
+  /* Browser-default style margins so printers don't crop headers/footers */
+  @page {
+    margin: 0.5in;
+  }
+  .opd-print-preview {
+    background: transparent;
+    border-top: none;
+    padding-top: 0.35rem;
+  }
+}
+
+@media print {
+  .app-shell,
+  .main {
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+  .only-print {
+    display: block !important;
+  }
+  html[data-opd-print-mode="prescription"] .opd-page > .grid2,
+  html[data-opd-print-mode="prescription"]
+    .opd-page
+    > .stack.opd-case-stack
+    > :not(.opd-prescription),
+  html[data-opd-print-mode="prescription"]
+    .opd-page
+    > .card:not(.opd-prescription) {
+    display: none !important;
+  }
+
+  html[data-opd-print-mode="case-tab"] .opd-page > .grid2,
+  html[data-opd-print-mode="case-tab"]
+    .opd-page
+    > .stack.opd-case-stack
+    > :not(.opd-case-tab-print),
+  html[data-opd-print-mode="case-tab"]
+    .opd-page
+    > .card:not(.opd-case-tab-print) {
+    display: none !important;
+  }
+  .opd-page {
+    max-width: 100%;
+  }
+  body {
+    background: #fff;
+    overflow: visible !important;
+  }
+  .sidebar,
+  .no-print,
+  .page-head .actions {
+    display: none !important;
+  }
+  .main {
+    padding: 0;
+  }
+  .card {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+  .print-area {
+    break-inside: auto;
+  }
+  .print-area li {
+    break-inside: avoid;
+  }
+  .opd-prescription {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    /* Leave room so content never sits under the fixed Urdu footer */
+    padding-bottom: 5.5rem;
+  }
+
+  /* Logo stays pinned at the top of every printed page */
+  .opd-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding-bottom: 0.2rem;
+  }
+
+  .opd-logo img {
+    max-height: 48px !important;
+    width: auto !important;
+    max-width: 160px !important;
+    height: auto !important;
+  }
+
+  /* Keep layout top-aligned: reserve the logo’s space in the document flow */
+  .opd-prescription-top {
+    min-height: 52px;
+    align-items: flex-start;
+  }
+
+  /* Urdu disclaimer only exists on prescription prints — pin to page bottom */
+  .urdu-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    margin-top: 0 !important;
+    padding-top: 0.35rem;
+    border-top: 1px solid #eee;
+    page-break-inside: avoid;
+  }
+
+  .pet-detail-page .print-area img,
+  .opd-case-tab-print.print-area img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+
+  .pet-detail-page .print-area table,
+  .opd-case-tab-print.print-area table {
+    width: 100%;
+  }
+
+  .pet-detail-page .print-area a,
+  .opd-case-tab-print.print-area a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .modal-backdrop {
+    position: static !important;
+    padding: 0 !important;
+    background: transparent !important;
+    display: block !important;
+  }
+  .modal {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+.pet-row:hover .hidden-actions {
+  opacity: 1 !important;
+}
