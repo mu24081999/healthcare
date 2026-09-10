@@ -1,0 +1,31 @@
+[package]
+name = "tauri-app"
+version = "0.1.0"
+description = "Waleed Pet Care Clinic"
+authors = ["you"]
+edition = "2021"
+
+[lib]
+name = "tauri_app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2.11", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+r2d2 = "0.8"
+r2d2_sqlite = "0.25"
+bcrypt = "0.16"
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+time = "=0.3.36"
+dirs = "6"
+mongodb = { version = "3.1.0", features = ["rustls-tls", "dns-resolver"] }
+tokio = { version = "1.43", features = ["sync", "time"] }
+
+
