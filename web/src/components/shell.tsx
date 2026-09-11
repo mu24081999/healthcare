@@ -36,8 +36,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
     <div className="app-shell">
       <aside className="sidebar">
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '2rem' }}>
-          <Logo style={{ width: '2rem', height: '2rem', fontSize: '1.5rem', marginBottom: 0 }} />
-          <div className="brand" style={{ margin: 0 }}>{clinic?.name || 'Pet Care Clinic'}</div>
+          <Logo variation="light" style={{ width: '12rem', height: '4rem', fontSize: '1.5rem', marginBottom: 0 }} />
+          {/* <div className="brand" style={{ margin: 0 }}>{clinic?.name || 'Health Care'}</div> */}
         </div>
         <nav className="nav">
           <Link className={pathname === "/" ? "active" : ""} href="/">
@@ -64,7 +64,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </Link>
           )}
 
-          <div style={{ marginTop: '1.5rem', marginBottom: '0.25rem', paddingLeft: '0.75rem', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#7a8ba8', fontWeight: 600 }}>OPD</div>
+          <div style={{ marginTop: '1.5rem', marginBottom: '0.25rem', paddingLeft: '0.75rem', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#888888', fontWeight: 600 }}>OPD</div>
           <Link
             className={pathname.startsWith("/opd") ? "active" : ""}
             href="/opd"
@@ -80,7 +80,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </Link>
           )}
 
-          <div style={{ marginTop: '1.5rem', marginBottom: '0.25rem', paddingLeft: '0.75rem', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#7a8ba8', fontWeight: 600 }}>Laboratory</div>
+          <div style={{ marginTop: '1.5rem', marginBottom: '0.25rem', paddingLeft: '0.75rem', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#888888', fontWeight: 600 }}>Laboratory</div>
           <Link
             className={pathname.startsWith("/lab") ? "active" : ""}
             href="/lab"
@@ -112,7 +112,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <div className="small" style={{ color: '#fff', fontWeight: 600 }}>
             {user.display_name}
           </div>
-          <div className="small" style={{ color: '#c9d7ea', marginBottom: '0.75rem' }}>
+          <div className="small" style={{ color: '#a1a1a1', marginBottom: '0.75rem' }}>
             <span className="role-pill">{user.role}</span>
           </div>
           <button
@@ -124,8 +124,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
               alignItems: 'center', 
               justifyContent: 'center',
               gap: '0.5rem', 
-              background: 'rgba(255, 255, 255, 0.08)',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
+              background: 'rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
               color: '#fff',
               marginTop: '0.5rem'
             }}

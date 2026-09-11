@@ -361,7 +361,7 @@ export function OpdPrescriptionPrint({
                 padding: "0 0.6rem 0.5rem 0.6rem",
                 display: "flex",
                 flexDirection: "column",
-                borderLeft: i % 3 === 0 ? "none" : "1px dashed #ced7e7",
+                borderLeft: i % 3 === 0 ? "none" : "1px dashed #cccccc",
               }}
             >
               {box.content}
@@ -850,7 +850,7 @@ export function OpdPrescriptionPrint({
 //                 padding: "0 1rem 1rem 1rem",
 //                 display: "flex",
 //                 flexDirection: "column",
-//                 borderLeft: i % 3 === 0 ? "none" : "1px dashed #ced7e7",
+//                 borderLeft: i % 3 === 0 ? "none" : "1px dashed #cccccc",
 //               }}
 //             >
 //               {box.content}

@@ -49,7 +49,7 @@ async function ensurePetCardIds(): Promise<void> {
 }
 
 async function ensureSuperadminUser(): Promise<void> {
-  const bcrypt = await import("bcrypt");
+  const bcrypt = await import("bcryptjs");
   const { v4: uuid } = await import("uuid");
   const { User } = await import("@/lib/models");
   const exists = await User.findOne({ username: "superadmin" }).lean();
@@ -90,7 +90,11 @@ export async function connectDb(): Promise<typeof mongoose> {
   if (!g.mongooseConn!.promise) {
     // Always use the single shared `petcare` database.
     g.mongooseConn!.promise = mongoose
-      .connect(uri, { dbName: "petcare" })
+      .connect(uri, {
+        dbName: "petcare",
+        serverSelectionTimeoutMS: 20000,
+        family: 4,
+      })
       .then((m) => m);
   }
   g.mongooseConn!.conn = await g.mongooseConn!.promise;

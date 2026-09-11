@@ -94,7 +94,7 @@ export function OpdPrescriptionPrint({
       <div className="opd-prescription-meta" style={{ marginTop: "0.6rem" }}>
         <div
           style={{
-            borderBottom: "1.5px solid #6b7280",
+            borderBottom: "1.5px solid #777777",
             paddingBottom: "0.3rem",
             marginBottom: "0.5rem",
           }}
@@ -138,7 +138,7 @@ export function OpdPrescriptionPrint({
           className="opd-prescription-body"
           style={{
             marginBottom: "0.6rem",
-            borderBottom: "1.5px solid #6b7280",
+            borderBottom: "1.5px solid #777777",
             paddingBottom: "0.5rem",
           }}
         >
@@ -358,7 +358,7 @@ export function OpdPrescriptionPrint({
                   padding: "0 0.6rem 0.5rem 0.6rem",
                   display: "flex",
                   flexDirection: "column",
-                  borderLeft: i % 3 === 0 ? "none" : "1.5px dashed #6b7280",
+                  borderLeft: i % 3 === 0 ? "none" : "1.5px dashed #777777",
                 }}
               >
                 {box.content}
@@ -385,7 +385,7 @@ export function OpdPrescriptionPrint({
                     textTransform: "uppercase",
                     color: "#333",
                     display: "block",
-                    borderBottom: "1.5px solid #6b7280",
+                    borderBottom: "1.5px solid #777777",
                     paddingBottom: "3px",
                     marginBottom: "2px",
                   }}
@@ -420,7 +420,7 @@ export function OpdPrescriptionPrint({
                           <th
                             style={{
                               textAlign: "left",
-                              borderLeft: "1.5px solid #6b7280",
+                              borderLeft: "1.5px solid #777777",
                               paddingLeft: "0.6rem",
                             }}
                           >
@@ -441,7 +441,7 @@ export function OpdPrescriptionPrint({
                             <td
                               rowSpan={medicines.length}
                               style={{
-                                borderLeft: "1.5px solid #6b7280",
+                                borderLeft: "1.5px solid #777777",
                                 paddingLeft: "0.6rem",
                                 whiteSpace: "pre-wrap",
                                 verticalAlign: "top",

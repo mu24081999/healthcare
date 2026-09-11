@@ -1331,7 +1331,7 @@ export default function Opd() {
             <div
               style={{
                 marginBottom: "0.85rem",
-                borderBottom: "1px solid #e2e8f0",
+                borderBottom: "1px solid #e0e0e0",
                 paddingBottom: "0.65rem",
               }}
             >
@@ -1353,7 +1353,7 @@ export default function Opd() {
               key={m.id}
               style={{
                 marginBottom: "0.85rem",
-                borderBottom: "1px solid #e2e8f0",
+                borderBottom: "1px solid #e0e0e0",
                 paddingBottom: "0.65rem",
               }}
             >
@@ -1424,7 +1424,7 @@ export default function Opd() {
             <div
               style={{
                 marginBottom: "0.85rem",
-                borderBottom: "1px solid #e2e8f0",
+                borderBottom: "1px solid #e0e0e0",
                 paddingBottom: "0.65rem",
               }}
             >
@@ -1446,7 +1446,7 @@ export default function Opd() {
               key={m.id}
               style={{
                 marginBottom: "0.85rem",
-                borderBottom: "1px solid #e2e8f0",
+                borderBottom: "1px solid #e0e0e0",
                 paddingBottom: "0.65rem",
               }}
             >

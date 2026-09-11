@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { setSessionCookie, signSession } from "@/lib/auth/session";
 import { connectDb } from "@/lib/db";
 import { jsonError, jsonOk } from "@/lib/http";

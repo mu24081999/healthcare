@@ -50,15 +50,15 @@ export default function LoginPage() {
     <div className="auth-wrap">
       <form className="card auth-card" onSubmit={onSubmit}>
         <div className="auth-form-header" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-          <Logo style={{ width: '4rem', height: '4rem', marginBottom: '0.5rem' }} />
-          <h1>{clinic?.name || 'Pet Care Clinic'}</h1>
+          <Logo style={{ width: '12rem', height: '4rem', marginBottom: '0.5rem' }} />
+          <h1>{clinic?.name || 'Health Care'}</h1>
           <p className="subtitle">Sign in to continue to your account</p>
         </div>
         <div className="auth-form-group">
           <label className="auth-form-label">
             Username
             <div style={{ position: 'relative' }}>
-              <User size={18} style={{ position: 'absolute', left: '0.6rem', top: '50%', transform: 'translateY(-50%)', color: '#5c6473' }} />
+              <User size={18} style={{ position: 'absolute', left: '0.6rem', top: '50%', transform: 'translateY(-50%)', color: '#777777' }} />
               <input
                 className="auth-form-input"
                 style={{ width: '100%', paddingLeft: '2.2rem' }}
@@ -71,7 +71,7 @@ export default function LoginPage() {
           <label className="auth-form-label">
             Password
             <div style={{ position: 'relative' }}>
-              <Lock size={18} style={{ position: 'absolute', left: '0.6rem', top: '50%', transform: 'translateY(-50%)', color: '#5c6473' }} />
+              <Lock size={18} style={{ position: 'absolute', left: '0.6rem', top: '50%', transform: 'translateY(-50%)', color: '#777777' }} />
               <input
                 className="auth-form-input"
                 style={{ width: '100%', paddingLeft: '2.2rem', paddingRight: '2.5rem' }}
@@ -93,7 +93,7 @@ export default function LoginPage() {
                   padding: '0.25rem',
                   display: 'flex',
                   alignItems: 'center',
-                  color: '#5c6473'
+                  color: '#777777'
                 }}
                 onClick={() => setShowPassword(!showPassword)}
               >

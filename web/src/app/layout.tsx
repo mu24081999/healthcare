@@ -4,8 +4,13 @@ import { ClinicProvider } from "@/components/clinic-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pet Care Clinic",
-  description: "Pet care clinic management",
+  title: "Health-Care",
+  description: "Health-Care clinic management",
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    shortcut: "/favicon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({

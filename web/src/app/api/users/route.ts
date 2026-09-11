@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { v4 as uuid } from "uuid";
 import { requireSession } from "@/lib/auth/session";
 import { connectDb } from "@/lib/db";

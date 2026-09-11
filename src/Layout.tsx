@@ -55,7 +55,8 @@ export default function Layout() {
             flexDirection: "column",
           }}
         >
-          <Logo sidebarSize={160} />
+          <Logo style={{ width: '12rem', height: '4rem', fontSize: '1.5rem', marginBottom: 0 }} />
+
           {/* <div className="brand" style={{ margin: 0, display: "block" }}>
             {clinic?.name || "Waleed Pet Care Clinic"}
           </div> */}
@@ -95,7 +96,7 @@ export default function Layout() {
               fontSize: "0.75rem",
               textTransform: "uppercase",
               letterSpacing: "0.05em",
-              color: "#7a8ba8",
+              color: "#888888",
               fontWeight: 600,
             }}
           >
@@ -126,7 +127,7 @@ export default function Layout() {
               fontSize: "0.75rem",
               textTransform: "uppercase",
               letterSpacing: "0.05em",
-              color: "#7a8ba8",
+              color: "#888888",
               fontWeight: 600,
             }}
           >
@@ -174,10 +175,10 @@ export default function Layout() {
             style={{
               color:
                 syncStatus === "online"
-                  ? "#8fd6a8"
+                  ? "#eeeeee"
                   : syncStatus === "offline"
-                    ? "#f0b4b4"
-                    : "#c9d7ea",
+                    ? "#888888"
+                    : "#a1a1a1",
               marginBottom: "0.75rem",
               fontWeight: 600,
             }}
@@ -227,7 +228,7 @@ export default function Layout() {
           </div>
           <div
             className="small"
-            style={{ color: "#c9d7ea", marginBottom: "0.75rem" }}
+            style={{ color: "#a1a1a1", marginBottom: "0.75rem" }}
           >
             <span className="role-pill">{user.role}</span>
           </div>
@@ -240,8 +241,8 @@ export default function Layout() {
               alignItems: "center",
               justifyContent: "center",
               gap: "0.5rem",
-              background: "rgba(255, 255, 255, 0.08)",
-              border: "1px solid rgba(255, 255, 255, 0.15)",
+              background: "rgba(255, 255, 255, 0.1)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
               color: "#fff",
               marginTop: "0.5rem",
             }}

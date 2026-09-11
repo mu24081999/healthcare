@@ -169,7 +169,7 @@ export default function Pets() {
 
       <div className="card" style={{ marginBottom: "1.5rem", padding: '0.75rem' }}>
         <div style={{ position: 'relative' }}>
-          <Search size={18} style={{ position: 'absolute', left: '0.75rem', top: '50%', transform: 'translateY(-50%)', color: '#5c6473' }} />
+          <Search size={18} style={{ position: 'absolute', left: '0.75rem', top: '50%', transform: 'translateY(-50%)', color: '#777777' }} />
           <input 
             value={q} 
             onChange={(e) => setQ(e.target.value)} 
@@ -363,12 +363,12 @@ export default function Pets() {
                 <td style={{ padding: '1.25rem 0.75rem' }}>{p.owner_name ?? "—"}</td>
                 <td style={{ padding: '1.25rem 0.75rem' }}>{p.owner_phone ?? "—"}</td>
                 <td style={{ padding: '1.25rem 0.75rem' }}>
-                    <span style={{ padding: '0.35rem 0.75rem', borderRadius: '999px', fontSize: '0.85rem', fontWeight: 600, background: p.vaccine_status === 'Yes' ? '#e6f6f2' : '#fde8e8', color: p.vaccine_status === 'Yes' ? '#1c7c64' : '#9b1c1c' }}>
+                    <span style={{ padding: '0.35rem 0.75rem', borderRadius: '999px', fontSize: '0.85rem', fontWeight: 600, background: p.vaccine_status === 'Yes' ? '#e6f6f2' : '#f5f5f5', color: p.vaccine_status === 'Yes' ? '#1c7c64' : '#000000' }}>
                         {p.vaccine_status ?? "No"}
                     </span>
                 </td>
                 <td style={{ padding: '1.25rem 0.75rem' }}>
-                    <span style={{ padding: '0.35rem 0.75rem', borderRadius: '999px', fontSize: '0.85rem', fontWeight: 600, background: p.deworming_status === 'Yes' ? '#e6f6f2' : '#fde8e8', color: p.deworming_status === 'Yes' ? '#1c7c64' : '#9b1c1c' }}>
+                    <span style={{ padding: '0.35rem 0.75rem', borderRadius: '999px', fontSize: '0.85rem', fontWeight: 600, background: p.deworming_status === 'Yes' ? '#e6f6f2' : '#f5f5f5', color: p.deworming_status === 'Yes' ? '#1c7c64' : '#000000' }}>
                         {p.deworming_status ?? "No"}
                     </span>
                 </td>

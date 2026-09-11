@@ -130,7 +130,7 @@ export default function LabPage() {
             <label className="auth-form-label">
               Pet
               <div style={{ position: 'relative' }}>
-                <Dog size={18} style={{ position: 'absolute', left: '0.6rem', top: '50%', transform: 'translateY(-50%)', color: '#5c6473' }} />
+                <Dog size={18} style={{ position: 'absolute', left: '0.6rem', top: '50%', transform: 'translateY(-50%)', color: '#777777' }} />
                 <select
                   required
                   className="auth-form-input"
@@ -145,14 +145,14 @@ export default function LabPage() {
                     </option>
                   ))}
                 </select>
-                <ChevronRight size={18} style={{ position: 'absolute', right: '0.6rem', top: '50%', transform: 'translateY(-50%) rotate(90deg)', color: '#5c6473', pointerEvents: 'none' }} />
+                <ChevronRight size={18} style={{ position: 'absolute', right: '0.6rem', top: '50%', transform: 'translateY(-50%) rotate(90deg)', color: '#777777', pointerEvents: 'none' }} />
               </div>
             </label>
 
             <label className="auth-form-label">
               Test panel
               <div style={{ position: 'relative' }}>
-                <FlaskConical size={18} style={{ position: 'absolute', left: '0.6rem', top: '50%', transform: 'translateY(-50%)', color: '#5c6473' }} />
+                <FlaskConical size={18} style={{ position: 'absolute', left: '0.6rem', top: '50%', transform: 'translateY(-50%)', color: '#777777' }} />
                 <select
                   required
                   className="auth-form-input"
@@ -166,14 +166,14 @@ export default function LabPage() {
                     </option>
                   ))}
                 </select>
-                <ChevronRight size={18} style={{ position: 'absolute', right: '0.6rem', top: '50%', transform: 'translateY(-50%) rotate(90deg)', color: '#5c6473', pointerEvents: 'none' }} />
+                <ChevronRight size={18} style={{ position: 'absolute', right: '0.6rem', top: '50%', transform: 'translateY(-50%) rotate(90deg)', color: '#777777', pointerEvents: 'none' }} />
               </div>
             </label>
 
             <label className="auth-form-label">
               Tentative report time
               <div style={{ position: 'relative' }}>
-                <Calendar size={18} style={{ position: 'absolute', left: '0.6rem', top: '50%', transform: 'translateY(-50%)', color: '#5c6473' }} />
+                <Calendar size={18} style={{ position: 'absolute', left: '0.6rem', top: '50%', transform: 'translateY(-50%)', color: '#777777' }} />
                 <input
                   type="datetime-local"
                   className="auth-form-input"
@@ -197,16 +197,16 @@ export default function LabPage() {
           )}
           {lastOrder && (
             <>
-              <div id="lab-receipt-print" className="receipt lab-print-area" style={{ padding: '1rem', background: '#f8fafc', borderRadius: '8px', border: '1px solid #e1e6ef' }}>
-                <h3 style={{ marginBottom: '1rem', color: '#1a1d24', borderBottom: '1px solid #d8e0ee', paddingBottom: '0.5rem' }}>Lab Receipt</h3>
+              <div id="lab-receipt-print" className="receipt lab-print-area" style={{ padding: '1rem', background: '#f5f5f5', borderRadius: '8px', border: '1px solid #e5e5e5' }}>
+                <h3 style={{ marginBottom: '1rem', color: '#111111', borderBottom: '1px solid #e5e5e5', paddingBottom: '0.5rem' }}>Lab Receipt</h3>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
-                  <p style={{ margin: 0 }}><strong style={{ color: '#5c6473' }}>Receipt:</strong><br /> {lastOrder.receipt_number}</p>
-                  <p style={{ margin: 0 }}><strong style={{ color: '#5c6473' }}>Test:</strong><br /> {testName || "—"}</p>
-                  <p style={{ margin: 0 }}><strong style={{ color: '#5c6473' }}>Pet:</strong><br /> {pet ? `${pet.name} (${pet.species ?? "—"})` : "Loading…"}</p>
-                  <p style={{ margin: 0 }}><strong style={{ color: '#5c6473' }}>Owner:</strong><br /> {pet?.owner_name ?? "—"}</p>
-                  <p style={{ margin: 0, gridColumn: 'span 2' }}><strong style={{ color: '#5c6473' }}>Tentative report:</strong><br /> {lastOrder.tentative_report_at ? new Date(lastOrder.tentative_report_at).toLocaleString() : "—"}</p>
+                  <p style={{ margin: 0 }}><strong style={{ color: '#777777' }}>Receipt:</strong><br /> {lastOrder.receipt_number}</p>
+                  <p style={{ margin: 0 }}><strong style={{ color: '#777777' }}>Test:</strong><br /> {testName || "—"}</p>
+                  <p style={{ margin: 0 }}><strong style={{ color: '#777777' }}>Pet:</strong><br /> {pet ? `${pet.name} (${pet.species ?? "—"})` : "Loading…"}</p>
+                  <p style={{ margin: 0 }}><strong style={{ color: '#777777' }}>Owner:</strong><br /> {pet?.owner_name ?? "—"}</p>
+                  <p style={{ margin: 0, gridColumn: 'span 2' }}><strong style={{ color: '#777777' }}>Tentative report:</strong><br /> {lastOrder.tentative_report_at ? new Date(lastOrder.tentative_report_at).toLocaleString() : "—"}</p>
                 </div>
-                <p className="small muted" style={{ marginTop: '1rem', paddingTop: '0.5rem', borderTop: '1px dashed #ced7e7' }}>
+                <p className="small muted" style={{ marginTop: '1rem', paddingTop: '0.5rem', borderTop: '1px dashed #cccccc' }}>
                   Ordered: {new Date(lastOrder.created_at).toLocaleString()}
                 </p>
               </div>

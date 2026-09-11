@@ -26,7 +26,7 @@ export function Logo({ style, sidebarSize }: LogoProps) {
   if (clinic?.logo) {
     return (
       <img
-        src="/logo.jpg" 
+        src="/logo.png" 
         alt="Clinic Logo"
         style={logoStyles}
       />
@@ -35,7 +35,7 @@ export function Logo({ style, sidebarSize }: LogoProps) {
 
   return (
     <img
-      src="/logo.jpg" 
+      src="/logo.png" 
       alt="Default Clinic Logo"
       style={{
         ...logoStyles,

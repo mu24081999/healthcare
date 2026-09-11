@@ -66,7 +66,7 @@ export default function Login() {
                   left: "0.6rem",
                   top: "50%",
                   transform: "translateY(-50%)",
-                  color: "#5c6473",
+                  color: "#777777",
                 }}
               />
               <input
@@ -88,7 +88,7 @@ export default function Login() {
                   left: "0.6rem",
                   top: "50%",
                   transform: "translateY(-50%)",
-                  color: "#5c6473",
+                  color: "#777777",
                 }}
               />
               <input
@@ -116,7 +116,7 @@ export default function Login() {
                   padding: "0.25rem",
                   display: "flex",
                   alignItems: "center",
-                  color: "#5c6473",
+                  color: "#777777",
                 }}
                 onClick={() => setShowPassword(!showPassword)}
               >
